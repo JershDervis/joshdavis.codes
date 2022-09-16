@@ -1,0 +1,15 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import HomeAnimation from '../components/HomeAnimation.svelte';
+---
+
+<PageLayout title="Josh Davis Codes" description="A portfolio of my developer experience">
+  <img class="absolute object-cover w-full h-full" alt="Image of Josh" src="/bg.jpg" />
+  <div class="w-full h-screen bg-slate-900 bg-opacity-80 relative">
+    <main
+      class={`container mx-auto flex flex-col items-center justify-center min-h-screen p-4`}
+    >
+      <HomeAnimation client:load />
+    </main>
+  </div>
+</PageLayout>

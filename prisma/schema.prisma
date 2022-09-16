@@ -1,0 +1,35 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+  provider             = "mysql"
+  url                  = env("DATABASE_URL")
+  referentialIntegrity = "prisma"
+}
+
+model Repository {
+  id          Int      @id @default(autoincrement())
+  repoId      Int      @unique
+  name        String
+  description String?
+  url         String
+  stars       Int
+  forks       Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  // pushedAt    DateTime
+  // commits     Commit[]
+}
+
+// model Commit {
+//   id           String     @id @default(cuid())
+//   sha          String
+//   message      String
+//   url          String
+//   createdAt    DateTime   @default(now())
+//   updatedAt    DateTime   @updatedAt
+//   repository   Repository @relation(fields: [repositoryId], references: [id])
+//   repositoryId String
+// }

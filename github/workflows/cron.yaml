@@ -1,0 +1,13 @@
+name: fetch-repos
+on:
+  schedule:
+    - cron: '0 1 * * *'
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call the update database route
+        run: |
+          curl --request POST \
+          --url 'https://joshdavis.codes/api/cron/github' \
+          --header 'Authorization: Bearer ${{ secrets.API_SECRET_KEY }}'
