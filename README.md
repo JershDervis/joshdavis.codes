@@ -1,4 +1,5 @@
-# JoshDavis.codes
+# Josh Davis Codes
+https://joshdavis.codes
 
 This is the current project of my career portfolio. The idea is to connect this to external services like Github and LinkedIn so any career based updates can come from other external sources. This means I won't need to worry about pushing updates of what I'm doing to this site, instead it'll gather that data and display it neatly to whomever wants to see it.
 
