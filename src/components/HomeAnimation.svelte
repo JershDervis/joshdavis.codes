@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+
   import Linkedin from 'svelte-bootstrap-icons/lib/Linkedin.svelte';
   import Github from 'svelte-bootstrap-icons/lib/Github.svelte';
   import EnvelopeFill from 'svelte-bootstrap-icons/lib/EnvelopeFill.svelte';
@@ -48,7 +49,11 @@
         rel="noopener noreferrer"
         class="p-4 md:m-2 m-4 rounded-md hover:bg-gray-800 transform duration-200 hover:bg-opacity-100 transition-all hover:scale-110"
       >
-        <svelte:component this={social.icn} class="w-6 h-6 text-gray-300" />
+        <svelte:component
+          this={social.icn}
+          alt={social.name}
+          class="w-6 h-6 text-gray-300"
+        />
       </a>
     {/each}
   </div>
