@@ -26,6 +26,7 @@
     "@astrojs/svelte": "^1.0.0",
     "@astrojs/vercel": "^2.0.0",
     "svelte": "^3.50.1",
-    "svelte-bootstrap-icons": "^2.2.0"
+    "svelte-bootstrap-icons": "^2.2.0",
+    "web-vitals": "^2.1.4"
   }
 }

@@ -1,27 +1,35 @@
 ---
-import { Seo } from "astro-seo-meta";
+import { Seo } from 'astro-seo-meta';
+import { webVitals } from '../lib/vitals';
 
 export interface Props {
   title: string;
   description: string;
 }
 
+// Generated when deployed to Vercel
+let analyticsId = import.meta.env.VERCEL_ANALYTICS_ID;
+
+if (analyticsId) {
+  webVitals({
+    path: Astro.url.pathname,
+    params: Astro.params,
+    analyticsId
+  });
+}
+
 const { title, description } = Astro.props;
 ---
+
 <html lang="en">
   <head>
     <title>{title}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <Seo
-      title={title}
-      description={description}
-      icon="favicon.ico"
-    />
+    <Seo title={title} description={description} icon="favicon.ico" />
   </head>
   <body>
-    <!-- Navbar -->
     <article>
       <slot />
     </article>

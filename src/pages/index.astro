@@ -3,8 +3,15 @@ import PageLayout from '../layouts/PageLayout.astro';
 import HomeAnimation from '../components/HomeAnimation.svelte';
 ---
 
-<PageLayout title="Josh Davis Codes" description="A portfolio of my developer experience">
-  <img class="absolute object-cover w-full h-full" alt="Image of Josh" src="/bg.jpg" />
+<PageLayout
+  title="Josh Davis Codes"
+  description="A portfolio of my developer experience"
+>
+  <img
+    class="absolute object-cover w-full h-full"
+    alt="Image of Josh"
+    src="/bg.jpg"
+  />
   <div class="w-full h-screen bg-slate-900 bg-opacity-80 relative">
     <main
       class={`container mx-auto flex flex-col items-center justify-center min-h-screen p-4`}
@@ -12,4 +19,9 @@ import HomeAnimation from '../components/HomeAnimation.svelte';
       <HomeAnimation client:load />
     </main>
   </div>
+  <!-- <div class="w-full bg-slate-900 bg-opacity-80 relative">
+    <p>Well well well</p>
+    Content below landing page
+    Could try hydrate in the components client:visible within this div and let them fly in
+  </div> -->
 </PageLayout>
